@@ -2,10 +2,6 @@ package components;
 
 import operations.VillageVisitor;
 
-/**
- * Leaf component representing basic shapes.
- * Used as building blocks for houses, trees, and water sources.
- */
 public class SimpleShape implements VillageComponent {
     public enum ShapeType {
         RECTANGLE, TRIANGLE, CIRCLE, OVAL, LINE

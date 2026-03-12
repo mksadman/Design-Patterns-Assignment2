@@ -4,10 +4,6 @@ import components.*;
 import factories.BuilderFactory;
 import factories.VillageFactory;
 
-/**
- * Concrete Builder that uses a VillageFactory to create components.
- * This demonstrates the combination of Builder and Abstract Factory patterns.
- */
 public class ConcreteVillageBuilder implements VillageBuilder {
     private Village village;
     private VillageFactory factory;
@@ -26,11 +22,9 @@ public class ConcreteVillageBuilder implements VillageBuilder {
 
     @Override
     public void setVillageName(String name) {
-        // Create a new village with the specified name but keep existing components
         Village newVillage = builderFactory.createVillage(name);
         newVillage.setVillageStyle(factory.getVillageStyle());
-        
-        // Transfer existing components
+
         for (House house : village.getHouses()) {
             newVillage.addHouse(house);
         }
@@ -40,7 +34,7 @@ public class ConcreteVillageBuilder implements VillageBuilder {
         for (WaterSource ws : village.getWaterSources()) {
             newVillage.addWaterSource(ws);
         }
-        
+
         this.village = newVillage;
     }
 
@@ -79,7 +73,7 @@ public class ConcreteVillageBuilder implements VillageBuilder {
     @Override
     public Village getResult() {
         Village result = village;
-        reset(); // Reset for next build
+        reset();
         return result;
     }
 

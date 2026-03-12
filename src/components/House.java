@@ -1,9 +1,5 @@
 package components;
 
-/**
- * Abstract House class - extended by specific house types.
- * Houses are composites containing simple shapes.
- */
 public abstract class House extends VillageComposite {
     protected String houseType;
     protected String material;

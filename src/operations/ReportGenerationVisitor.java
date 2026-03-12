@@ -6,10 +6,6 @@ import components.House;
 import components.Tree;
 import components.WaterSource;
 
-/**
- * Concrete Visitor for generating a comprehensive report of a village.
- * Creates a detailed summary of the village structure and statistics.
- */
 public class ReportGenerationVisitor implements VillageVisitor {
     private StringBuilder report;
     private int componentCount;
@@ -87,10 +83,10 @@ public class ReportGenerationVisitor implements VillageVisitor {
         StringBuilder result = new StringBuilder();
         result.append("VILLAGE REPORT\n");
         result.append("==============\n\n");
-        
+
         result.append("Village Name: ").append(villageName).append("\n");
         result.append("Village Style: ").append(villageStyle).append("\n\n");
-        
+
         result.append("STATISTICS\n");
         result.append("----------\n");
         result.append("Total Main Components: ").append(componentCount).append("\n");
@@ -98,11 +94,11 @@ public class ReportGenerationVisitor implements VillageVisitor {
         result.append("  - Trees: ").append(treeCount).append("\n");
         result.append("  - Water Sources: ").append(waterSourceCount).append("\n");
         result.append("Total Shapes Used: ").append(shapeCount).append("\n\n");
-        
+
         result.append("COMPONENT DETAILS\n");
         result.append("-----------------\n");
         result.append(report.toString());
-        
+
         return result.toString();
     }
 }

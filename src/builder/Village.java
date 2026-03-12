@@ -4,10 +4,6 @@ import components.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Product class representing a complete Village.
- * Contains houses, trees, and water sources as a composite structure.
- */
 public class Village extends VillageComposite {
     private String villageName;
     private String villageStyle;

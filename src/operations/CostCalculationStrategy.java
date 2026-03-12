@@ -2,11 +2,8 @@ package operations;
 
 import builder.Village;
 
-/**
- * Concrete Strategy for cost calculation using the Visitor pattern.
- */
 public class CostCalculationStrategy implements OperationStrategy {
-    
+
     @Override
     public String execute(Village village) {
         CostCalculationVisitor visitor = new CostCalculationVisitor();

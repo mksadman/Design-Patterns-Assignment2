@@ -1,9 +1,5 @@
 package components;
 
-/**
- * Abstract Tree class - extended by specific tree types.
- * Trees are composites containing simple shapes.
- */
 public abstract class Tree extends VillageComposite {
     protected String treeType;
     protected String fruitType;

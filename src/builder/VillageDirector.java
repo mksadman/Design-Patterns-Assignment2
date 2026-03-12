@@ -1,11 +1,5 @@
 package builder;
 
-import factories.VillageFactory;
-
-/**
- * Director class that orchestrates the building process.
- * Defines different village configurations.
- */
 public class VillageDirector {
     private VillageBuilder builder;
 
@@ -17,10 +11,6 @@ public class VillageDirector {
         this.builder = builder;
     }
 
-    /**
-     * Constructs a small village with minimal components.
-     * 1 house, 2 trees, 1 water source
-     */
     public Village constructSmallVillage(String name) {
         builder.reset();
         builder.setVillageName(name);
@@ -31,10 +21,6 @@ public class VillageDirector {
         return builder.getResult();
     }
 
-    /**
-     * Constructs a medium village with moderate components.
-     * 3 houses, 5 trees, 1 water source
-     */
     public Village constructMediumVillage(String name) {
         builder.reset();
         builder.setVillageName(name);
@@ -44,10 +30,6 @@ public class VillageDirector {
         return builder.getResult();
     }
 
-    /**
-     * Constructs a large village with many components.
-     * 5 houses, 10 trees, 2 water sources
-     */
     public Village constructLargeVillage(String name) {
         builder.reset();
         builder.setVillageName(name);
@@ -58,9 +40,6 @@ public class VillageDirector {
         return builder.getResult();
     }
 
-    /**
-     * Constructs a custom village with specified components.
-     */
     public Village constructCustomVillage(String name, int houses, int trees, int waterSources) {
         builder.reset();
         builder.setVillageName(name);

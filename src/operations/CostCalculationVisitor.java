@@ -3,10 +3,6 @@ package operations;
 import components.SimpleShape;
 import components.VillageComposite;
 
-/**
- * Concrete Visitor for calculating the total cost of a village.
- * Traverses all components and sums up their costs.
- */
 public class CostCalculationVisitor implements VillageVisitor {
     private double totalCost;
     private StringBuilder breakdown;
@@ -28,9 +24,7 @@ public class CostCalculationVisitor implements VillageVisitor {
     public void visit(VillageComposite composite) {
         String padding = "  ".repeat(indent);
         String name = composite.getName();
-        
-        // Only add breakdown entry for main components (not sub-components)
-        if (name.contains("Village") || name.contains("House") || 
+        if (name.contains("Village") || name.contains("House") ||
             name.contains("Tree") || name.contains("Pool") || name.contains("Pond")) {
             breakdown.append(padding).append("+ ").append(name).append("\n");
         }

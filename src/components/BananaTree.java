@@ -2,12 +2,8 @@ package components;
 
 import factories.ShapeFactory;
 
-/**
- * Banana Tree - A traditional fruit tree/plant.
- * Part of the Traditional Village combination.
- */
 public class BananaTree extends Tree {
-    
+
     private static final ShapeFactory shapeFactory = ShapeFactory.getInstance();
 
     private BananaTree() {
@@ -16,21 +12,18 @@ public class BananaTree extends Tree {
         setAdditionalCost(20);
         buildStructure();
     }
-    
+
     public static BananaTree create() {
         return new BananaTree();
     }
 
     @Override
     protected void buildStructure() {
-        // Trunk/Stem (rectangle)
         add(shapeFactory.createRectangle("Stem", "Light Green", 15, "plant_fiber", 10));
-        // Large leaves (ovals)
         add(shapeFactory.createOval("Leaf 1", "Green", 10, "leaves", 5));
         add(shapeFactory.createOval("Leaf 2", "Green", 10, "leaves", 5));
         add(shapeFactory.createOval("Leaf 3", "Dark Green", 10, "leaves", 5));
         add(shapeFactory.createOval("Leaf 4", "Green", 10, "leaves", 5));
-        // Banana bunch (oval)
         add(shapeFactory.createOval("Banana Bunch", "Yellow", 8, "fruit", 12));
     }
 

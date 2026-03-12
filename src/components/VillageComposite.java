@@ -4,10 +4,6 @@ import operations.VillageVisitor;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Composite class that can contain other VillageComponents.
- * Used for hierarchical structures like houses containing shapes.
- */
 public class VillageComposite implements VillageComponent {
     private String name;
     private List<VillageComponent> children;

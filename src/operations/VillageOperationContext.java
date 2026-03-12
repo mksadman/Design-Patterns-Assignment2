@@ -2,15 +2,10 @@ package operations;
 
 import builder.Village;
 
-/**
- * Context class for the Strategy pattern.
- * Holds a reference to the current strategy and executes it on villages.
- */
 public class VillageOperationContext {
     private OperationStrategy strategy;
 
     public VillageOperationContext() {
-        // Default strategy
         this.strategy = new CostCalculationStrategy();
     }
 

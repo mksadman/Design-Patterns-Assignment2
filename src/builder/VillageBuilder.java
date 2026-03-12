@@ -1,10 +1,5 @@
 package builder;
 
-import components.*;
-
-/**
- * Builder interface for constructing villages step by step.
- */
 public interface VillageBuilder {
     void reset();
     void setVillageName(String name);
